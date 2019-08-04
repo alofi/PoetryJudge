@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section scripts{
+    
+    <script>
+        $(".txtb input").on("focus", function () { $(this).addClass("focus"); });
+
+        $(".txtb input").on("blur", function () {
+            if($(this).val()=="")
+            $(this).addClass("focus");
+        });
+    </script>
+
+}
+
+
+@*<form class="login-form">
+    <section class="container">
+
+
+        <h1>Login</h1>
+        <div class="txtb">
+            <input type="text" placeholder="Username" />
+            <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+            <input type="password" placeholder="Password" />
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" value="Login" class="logbtn" />
+
+        <div class="bottom-text">
+            Don't have account ? <a href="#">Sign up</a>
+        </div>
+    </section>
+</form>*@
+
+<div class="card  mx-auto my-5" style="width:360px; height:450px; font-family:'Amiri', serif;">
+    <div class="card-body">
+        <h2 class="card-title text-center">تسجيل الدخول </h2>
+       <br />
+
+        <section class="container">
+            <div class="txtb">
+                <input type="text" placeholder="اسم المستخدم " class="form-control no-border" />
+                @*<span data-placeholder="Username"></span>*@
+            </div>
+            <br />
+            <div class="txtb">
+                <input type="password" placeholder="كلمة المرور" class="form-control no-border p-0" />
+                <span data-placeholder="Password"></span>
+            </div>
+            <br />
+
+            <input type="submit" value="دخول" class="logbtn" />
+
+            <div class="bottom-text">
+                ليس لديك حساب ؟ <a href="#">سجل هنا </a>
+            </div>
+        </section>
+    </div>
+  
+</div>
